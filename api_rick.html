@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body onload="buscarPersonagens()">
+
+    <header><img src="logo.png" alt=""></header>
+
+    <main>
+
+        <section id="banner-principal">
+            <img src="rickEmory.png" alt="">
+        </section>
+
+        <section id="personagensVivos">
+                <h1 id="h1_vivos">Personagens Vivos</h1>
+                <div id="vivos">
+
+
+            </div>
+        </section>
+         <section id="personagensUnkn">
+
+                <div id="exibir_desconhecidos">
+                    <h1 id="h1_unkn">Personagens Unknown</h1>
+                    <div id="unknown"></div>
+            </section>
+        <section id="personagensMortos">
+             
+                <h1 id="h1_mortos">Personagens Mortos</h1>
+                <div id="mortos"></div>
+        </section>
+
+    </main>
+
+     <footer>
+            <div class="div_conteudo-footer">
+                <div class="footer-p1">
+                    <h3>Heloisy Mota</h3>
+                    <a href="https://github.com/HeloisyOM"><img src="logo-git.svg" alt="logo git hub" width="40px"></a>
+                </div>
+                <div class="footer-p2">
+                <h4>© 2025</h4>
+                </div>
+            </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function buscarPersonagens() {
+
+        var mensagemVivos = ``
+        var mensagemMortos = ''
+        var mensagemDescon = ''
+
+        fetch("https://rickandmortyapi.com/api/character").then(function (resposta) {
+            resposta.json()
+                .then(function (dados) {
+                    var caminho = dados.results
+                    for (var i = 0; i < caminho.length; i++) {
+                        if (caminho[i].status == 'Alive') {
+                            mensagemVivos += `
+                        <div class='div_personagem'>
+                        <div class='div_img'><img src="${caminho[i].image}"></div><br>
+                       <h3> ${caminho[i].name}</h3> <br>
+                        <h4>${caminho[i].status}</h4><br></div>  
+                        `
+                        }
+                        if (caminho[i].status == 'Dead') {
+                            mensagemMortos += `
+                        <div class='div_personagem'>
+                        <div class='div_img'><img src="${caminho[i].image}"></div><br>
+                       <h3> ${caminho[i].name}</h3> <br>
+                        <h4>${caminho[i].status}</h4><br></div>   
+                        `
+                        }
+                        if (caminho[i].status == 'unknown') {
+                            mensagemDescon += `
+                         <div class='div_personagem'>
+                        <div class='div_img'><img src="${caminho[i].image}"></div><br>
+                       <h3> ${caminho[i].name}</h3> <br>
+                        <h4>${caminho[i].status}</h4><br></div>  
+                        `
+                        }
+                        console.log(dados)
+                    }
+                    vivos.innerHTML = mensagemVivos;
+                    mortos.innerHTML = mensagemMortos;
+                    unknown.innerHTML = mensagemDescon;
+                })
+        })
+
+
+
+
+
+    }
+
+
+</script>

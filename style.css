@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+        font-family: "Righteous", sans-serif;
+
+}
+
+header {
+    padding-left: 4%;
+    padding-top: 2%;
+    background-color: #0d0e0e;
+}
+
+header img {
+    width: 12rem;
+}
+
+main{
+background-image: linear-gradient(
+  #0d0f27 0%,     
+  #3b0a45 30%,     
+  #7f2a73 55%,      
+  #2a52be 75%,      
+  #150f3e 100%      
+);
+}
+#banner-principal {
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0e0e;
+    border-bottom: 100px solid #0c0c0c;
+
+}
+
+#banner-principal img {
+    width: 45rem;
+    z-index: 1;
+}
+
+
+#vivos,
+#mortos,
+#unknown {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+    padding: 40px 0;
+
+}
+
+#personagensVivos,
+#personagensUnkn,#personagensMortos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 2%;
+
+}
+
+#personagensVivos h4,
+#personagensUnkn h4,#personagensMortos h4 {
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+}
+
+
+#personagensVivos h1,
+#personagensUnkn h1,
+#personagensMortos h1 {
+    font-size: 5rem;
+    color: #ffffff;
+    margin: 0 auto 10px;
+    text-align: center;      
+    width: 100%;            
+}
+
+
+
+#personagensVivos h3,
+#personagensUnkn h3,#personagensMortos h3 {
+    font-size: 22px;
+    color: #0d0e0e;
+}
+
+#personagensVivos h4 {
+    background-color: #44b800;
+
+}
+
+#personagensMortos h4 {
+ 
+    background-color: #d50000;
+
+}
+
+
+#personagensUnkn h4 {
+
+    background-color: #fcda00;
+  
+
+
+}
+.div_personagem img {
+    border: solid 0;
+    width: 60%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+.div_personagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #477c26;
+    box-shadow: 0 0 18px #000000;
+    padding: 1%;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 0;
+    background-color: white;
+
+}
+
+#personagensVivos .div_personagem:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px #44b800;
+    border-color: #44b800;
+}
+#personagensMortos .div_personagem:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px #d50000;
+    border-color: #d50000;
+}
+
+#personagensUnkn .div_personagem:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px #fcda00;
+    border-color: #fcda00;
+}
+
+footer {
+    border-top: 20px solid #0c0c0c;
+    background-color: #0d0e0e;
+    height: 8rem;
+    font-size: 1.2em;
+}
+
+footer h3,
+a,
+h4 {
+    color: white;
+}
+
+.div_conteudo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div_conteudo-footer .footer-p1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1%;
+    gap: 30px;
+
+}
+
+.div_conteudo-footer .footer-p2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
